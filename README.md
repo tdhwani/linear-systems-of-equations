@@ -1,7 +1,7 @@
 # linear-systems-of-equations
 Solving linear systems of equations
 
-**linear_system_qr.py file implements an overconstrained, homogeneous linear system. The module supports: **       
+__linear_system_qr.py file implements an overconstrained, homogeneous linear system. The module supports:__        
 
 • Initializing with a fixed constraint matrix A and storage of whatever internal variables needed for repeatedly minimizing.    
 
@@ -11,7 +11,7 @@ Solving linear systems of equations
 
 • Loading of a saved linear system   
 
-• Computation of the norm of the residual ||Ax − b||2.    
+• Computation of the norm of the residual ||Ax − b||<sub>2</sub>.    
    
      
 # How to call each function (Example):      
