@@ -7,7 +7,6 @@ class LinearSystem:
         # Initialize matrix A, and compute values for Q and R for QR factorization
         self.A = A
         self.Q, self.R = np.linalg.qr(A)
-        # self.Q, self.R = self.qr_factorization(A)
 
     def compute_optimal_x(self, b):
         # Compute the least-squares optimal x for the given b, using QR factorization
