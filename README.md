@@ -18,7 +18,7 @@ __solve_linear_system.py file implements an overconstrained, homogeneous linear 
   
 First, initialize the matrix A by calling the constructor for the class **LinearSystem**. It also initializes the necessary internal variables (U, D and V) using numpy's ```linalg.svd()``` funactionality.   
 
-To solve a linear system for a given b, call the function **compute_optimal_x**.    
+To solve a linear system for a given b, call the function **compute_optimal_x**. To handle the effects of floating point accuracy and to avoid the values of d_inv being unnecessarily huge, we have set a threshold value based on our matrix A.    
 
 To save the state of an already initialized system, simply call the method **save_state**, and provide the file name (in .npz format) to store into.     
 
