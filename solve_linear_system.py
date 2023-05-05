@@ -12,9 +12,11 @@ class LinearSystem:
         # Compute the least-squares optimal x for the given b, using SVD factorization
         
         UTb = np.dot(self.U.T, b)  # UTb represents (U Transpose).b
+        
+        threshold = np.max(self.A.shape) * np.finfo(self.A.dtype).eps * self.D[0]  
 
         d_inv = np.zeros_like(self.A.T)  # First, initialize as matrix of zeros with same shape as A transpose
-        d_inv[:self.D.shape[0], :self.D.shape[0]] = np.diag(1/self.D)   # Now, only the diagonal elements are non-zero
+        d_inv[:self.D.shape[0], :self.D.shape[0]] = np.diag(np.where(self.D > threshold, 1 / self.D, 0))  # Now, only the diagonal elements (above a certain threshold) are non-zero
 
         dinv_dot_UTb = np.dot(d_inv, UTb)
 
