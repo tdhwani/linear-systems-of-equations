@@ -16,7 +16,7 @@ __solve_linear_system.py file implements an overconstrained, homogeneous linear 
    
 # Explanation:   
   
-First, initialize the matrix A by calling the constructor for the class **LinearSystem**. It also initializes the necessary internal variables (U, D and V) using numpy's linalg.svd() funactionality.   
+First, initialize the matrix A by calling the constructor for the class **LinearSystem**. It also initializes the necessary internal variables (U, D and V) using numpy's ```linalg.svd()``` funactionality.   
 
 To solve a linear system for a given b, call the function **compute_optimal_x**.    
 
@@ -67,5 +67,3 @@ print("Loaded system:", lin_sys_loaded)
 residual_norm = lin_sys_loaded.residual_norm(b, x)
 print("Residual norm from loaded system:", residual_norm)   
 ```
-
-
